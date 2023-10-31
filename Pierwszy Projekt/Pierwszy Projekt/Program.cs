@@ -1,42 +1,42 @@
 ﻿using Pierwszy_Projekt;
 
-Employee employee1 = new Employee("Kuba", "Błaszczykowski", 35);
-Employee employee2 = new Employee("Łukasz", "Piszczek", 38);
-Employee employee3 = new Employee("Robert", "Lewandowski", 37);
+User user1 = new User("Kuba", "Błaszczykowski", 35);
+User user2 = new User("Łukasz", "Piszczek", 38);
+User user3 = new User("Robert", "Lewandowski", 37);
 
-employee1.AddScore(5);
-employee1.AddScore(7);
-employee1.AddScore(9);
-employee1.AddScore(11);
-employee1.AddScore(13);
+user1.AddScore(5);
+user1.AddScore(7);
+user1.AddScore(9);
+user1.AddScore(11);
+user1.AddScore(13);
 
-employee2.AddScore(2);
-employee2.AddScore(5);
-employee2.AddScore(9);
-employee2.AddScore(2);
-employee2.AddScore(1);
+user2.AddScore(2);
+user2.AddScore(5);
+user2.AddScore(9);
+user2.AddScore(2);
+user2.AddScore(1);
 
-employee3.AddScore(2);
-employee3.AddScore(4);
-employee3.AddScore(6);
-employee3.AddScore(8);
-employee3.AddScore(10);
+user3.AddScore(2);
+user3.AddScore(4);
+user3.AddScore(6);
+user3.AddScore(8);
+user3.AddScore(10);
 
-List<Employee> employees = new List<Employee>()
+List<User> users = new List<User>()
 {
-    employee1, employee2, employee3
+    user1, user2, user3
 };
 
 int maxResult = -1;
-Employee employeeWithMaxResult = null;
+User userWithMaxResult = null;
 
-foreach(var employee in employees)
+foreach(var user in users)
 {
-    if(employee.Result > maxResult)
+    if(user.Result > maxResult)
     {
-        employeeWithMaxResult = employee;
-        maxResult = employee.Result;
+        userWithMaxResult = user;
+        maxResult = user.Result;
     }
 }
 
-Console.WriteLine($" Najlepszym piłkarzem/pracownikiem został: {employeeWithMaxResult.Name} {employeeWithMaxResult.Surname} lat {employeeWithMaxResult.Age} i zdobył: {employeeWithMaxResult.Result} punktów");
+Console.WriteLine($" Najlepszym piłkarzem/pracownikiem został: {userWithMaxResult.Name} {userWithMaxResult.Surname} lat {userWithMaxResult.Age} i zdobył: {userWithMaxResult.Result} punktów");

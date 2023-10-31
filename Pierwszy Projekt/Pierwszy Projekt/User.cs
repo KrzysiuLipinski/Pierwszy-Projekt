@@ -1,10 +1,10 @@
 ﻿namespace Pierwszy_Projekt
 {
-    class Employee
+    public class User
     {
         List<int> score = new List<int>();
 
-        public Employee(string name, string surname, int age)
+        public User(string name, string surname, int age)
         {
             this.Name = name;
             this.Surname = surname;
